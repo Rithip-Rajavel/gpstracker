@@ -1,0 +1,27 @@
+server:
+  port: 5078
+  servlet:
+    context-path: /api/gps
+
+spring:
+  application:
+    name: gps-tracker
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gps
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
