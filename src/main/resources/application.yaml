@@ -1,7 +1,7 @@
 server:
   port: 5078
   servlet:
-    context-path: /gpstracker/api/
+    context-path: /gpstracker
 
 spring:
   application:

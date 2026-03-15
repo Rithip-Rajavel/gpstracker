@@ -28,7 +28,7 @@ public class OpenApiConfig {
                                .url("https://opensource.org/licenses/MIT")))
                .servers(List.of(
                        new Server()
-                               .url("http://localhost:5078/api/gps")
+                               .url("http://localhost:5078/gpstracker")
                                .description("Development server"),
                        new Server()
                                .url("https://api.gpstracker.com/api/gps")
