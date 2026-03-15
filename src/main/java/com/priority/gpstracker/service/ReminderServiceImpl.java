@@ -49,7 +49,7 @@ public class ReminderServiceImpl implements ReminderService {
                saved.getLatitude(),
                saved.getLongitude(),
                saved.getRadius(),
-               saved.getIsTriggered(),
+               saved.isTriggered(),
                saved.getCreatedAt()
        );
    }
@@ -69,7 +69,7 @@ public class ReminderServiceImpl implements ReminderService {
                        r.getLatitude(),
                        r.getLongitude(),
                        r.getRadius(),
-                       r.getIsTriggered(),
+                       r.isTriggered(),
                        r.getCreatedAt()
                ))
                .toList();
@@ -128,7 +128,12 @@ public class ReminderServiceImpl implements ReminderService {
                .map(r -> new ReminderResponse(
                        r.getId(),
                        r.getTitle(),
-                       r.getMessage()
+                       r.getMessage(),
+                       r.getLatitude(),
+                       r.getLongitude(),
+                       r.getRadius(),
+                       r.isTriggered(),
+                       r.getCreatedAt()
                ))
                .toList();
    }

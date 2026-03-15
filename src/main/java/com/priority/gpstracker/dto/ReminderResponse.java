@@ -7,9 +7,9 @@ public record ReminderResponse(
        UUID id,
        String title,
        String message,
-       Double latitude,
-       Double longitude,
-       Double radius,
-       Boolean isTriggered,
+       double latitude,
+       double longitude,
+       int radius,
+       boolean isTriggered,
        LocalDateTime createdAt
 ) {}
