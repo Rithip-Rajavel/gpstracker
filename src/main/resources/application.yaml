@@ -10,7 +10,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/gps
     username: postgres
-    password: postgres
+    password: Password123
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -25,3 +25,9 @@ spring:
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+jwt:
+  secret: mySecretKey123456789012345678901234567890
+  expiration: 86400000

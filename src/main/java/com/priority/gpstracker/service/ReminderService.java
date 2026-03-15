@@ -9,11 +9,11 @@ import java.util.UUID;
 
 public interface ReminderService {
 
-   ReminderResponse createReminder(ReminderRequest request);
+   ReminderResponse createReminder(ReminderRequest request, UUID userId);
 
-   List<ReminderResponse> getAllReminders();
+   List<ReminderResponse> getAllReminders(UUID userId);
 
-   void deleteReminder(UUID id);
+   void deleteReminder(UUID id, UUID userId);
 
-   List<ReminderResponse> checkLocation(LocationRequest request);
+   List<ReminderResponse> checkLocation(LocationRequest request, UUID userId);
 }

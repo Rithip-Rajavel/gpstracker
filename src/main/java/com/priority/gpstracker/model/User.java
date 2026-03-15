@@ -6,50 +6,40 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "reminders")
+@Table(name = "users")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Reminder {
+public class User {
 
    @Id
    @GeneratedValue(strategy = GenerationType.UUID)
    private UUID id;
 
-   @Column(nullable = false)
-   private String title;
+   @Column(nullable = false, unique = true)
+   private String email;
 
    @Column(nullable = false)
-   private String message;
+   private String password;
 
    @Column(nullable = false)
-   private double latitude;
-
-   @Column(nullable = false)
-   private double longitude;
-
-   @Column(nullable = false)
-   private int radius;
-
-   @Column(name = "is_triggered", nullable = false)
-   private boolean isTriggered;
+   private String name;
 
    @Column(name = "created_at", nullable = false)
    private LocalDateTime createdAt;
 
-   @ManyToOne
-   @JoinColumn(name = "user_id", nullable = false)
-   private User user;
+   @OneToMany(mappedBy = "user")
+   private List<Reminder> reminders;
 }
