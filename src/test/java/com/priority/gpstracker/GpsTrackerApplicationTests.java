@@ -1,10 +1,10 @@
-package com.student.gpstracker;
+package com.priority.gpstracker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GpstrackerApplicationTests {
+class GpsTrackerApplicationTests {
 
 	@Test
 	void contextLoads() {
