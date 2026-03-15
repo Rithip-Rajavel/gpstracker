@@ -1,7 +1,7 @@
 server:
   port: 5078
   servlet:
-    context-path: /api/gps
+    context-path: /gpstracker/api/
 
 spring:
   application:
@@ -10,7 +10,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/gps
     username: postgres
-    password: Password123
+    password: Password@123
     driver-class-name: org.postgresql.Driver
 
   jpa:
